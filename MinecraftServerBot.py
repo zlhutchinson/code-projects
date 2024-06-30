@@ -1,5 +1,6 @@
-import os
+# Basic Discord bot that launches batch file from local machine.
 
+import os
 import discord
 
 intents = discord.Intents.default()
@@ -7,11 +8,9 @@ intents.message_content = True
 
 client = discord.Client(intents=intents)
 
-
 @client.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
-
 
 @client.event
 async def on_message(message):
@@ -26,7 +25,7 @@ async def on_message(message):
         os.chdir(r'C:\Users\Zachary\Desktop\Minecraft Server')
         os.system('RunServer.bat')
 
-
+# Insert token provided by Discord Application here
 token = ""
 
 client.run(token)
