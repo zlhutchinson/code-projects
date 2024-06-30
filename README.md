@@ -1,1 +1,1 @@
-Just a general space for small project files.
+A general space for small project files.
